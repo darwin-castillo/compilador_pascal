@@ -112,7 +112,7 @@ precedence left LCORCHETE,RCORCHETE;
 precedence left LPAREN, RPAREN;
 
 /* REGLAS GRAMATICALES */
-program     ::= declare_program:prog SEMI body_program:bprog	
+program  ::= declare_program:prog body_program:bprog	
                                        {: if(debug) System.out.println("\t regla 1"); 
 						NodoBase hijoActual = prog;
 						if(hijoActual !=null){
@@ -124,19 +124,27 @@ program     ::= declare_program:prog SEMI body_program:bprog
 						}else{
 							RESULT=bprog;
 						}
-						:}
+					:}
 		;
 
 declare_program ::= PROGRAM ID:idpro SEMI {: if(debug) System.out.println("\t regla 2"); 
 					System.out.println("Asignando Nombre al programa");
-					if(idpro!=null)
-					RESULT = new NodoLeer(variable.toString());
-					else{
-					RESULT = null;
-					System.out.println("Ocurrio error en cup # 0002");
-					}
 					:}
 		;
+
+
+body_program   ::= lista_var:listvar function_stmt:fstmt body::bod{:
+                                        if(debug) System.out.println("\t regla 3"); 
+						NodoBase hijoActual = listvar;
+                                                if(hijoActual !=null){
+						while(hijoActual.TieneHermano()){
+					        hijoActual = hijoActual.getHermanoDerecha();
+							}
+                                                hijoActual.setHermanoDerecha(fstmt);
+                                                hijoActual.setHermanoDerecha(bod);
+                    :}
+;
+
 
 stmt        ::= if_stmt:sif	{: if(debug) System.out.println("\t regla 3a"); 
 					RESULT=sif;
