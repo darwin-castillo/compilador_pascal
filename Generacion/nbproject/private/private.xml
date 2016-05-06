@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Desktop/compiladores2016/Generacion/src/Tiny/Scanner.java</file>
+            <file>file:/D:/Desktop/compiladores2016/Generacion/src/Tiny/parser.java</file>
+            <file>file:/D:/Desktop/compiladores2016/Generacion/src/sintactico/sintactico.cup</file>
+            <file>file:/D:/Desktop/compiladores2016/Generacion/src/Tiny/UtGen.java</file>
+            <file>file:/D:/Desktop/compiladores2016/Generacion/src/Lexico/lexico.flex</file>
+            <file>file:/D:/Desktop/compiladores2016/Generacion/src/ast/NodoDoWhile.java</file>
+            <file>file:/D:/Desktop/compiladores2016/Generacion/src/ast/NodoPrograma.java</file>
+            <file>file:/D:/Desktop/compiladores2016/Generacion/src/ast/Util.java</file>
+            <file>file:/D:/Desktop/compiladores2016/Generacion/src/ast/tipoOp.java</file>
+        </group>
+    </open-files>
+</project-private>
